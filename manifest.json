@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "カスパ拡張 (UNIVERSAL PASSPORT RX)",
+  "version": "0.1.0",
+  "description": "広島市立大学のカスパ(UNIVERSAL PASSPORT RX)に、授業資料の一括ダウンロードとブラウザの戻るボタン対応を追加します。",
+  "permissions": ["downloads", "storage"],
+  "host_permissions": ["https://ichipol.g.hiroshima-cu.ac.jp/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "カスパ拡張",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://ichipol.g.hiroshima-cu.ac.jp/uprx/*"],
+      "js": ["content/ajax-bridge.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://ichipol.g.hiroshima-cu.ac.jp/uprx/*"],
+      "js": ["content/common.js", "content/back-button.js", "content/bulk-download.js"],
+      "css": ["content/style.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

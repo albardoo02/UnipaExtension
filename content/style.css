@@ -1,0 +1,94 @@
+.kaspa-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+  padding: 8px 10px;
+  border: 1px solid #c9d6e3;
+  border-radius: 6px;
+  background: #f4f8fc;
+  font-size: 13px;
+}
+
+.kaspa-btn {
+  padding: 5px 12px;
+  border: 1px solid #9fb3c8;
+  border-radius: 4px;
+  background: #fff;
+  color: #1f2d3d;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.kaspa-btn:hover {
+  background: #eef3f8;
+}
+
+.kaspa-btn-primary {
+  border-color: #2f6db3;
+  background: #2f6db3;
+  color: #fff;
+}
+
+.kaspa-btn-primary:hover {
+  background: #255a95;
+}
+
+.kaspa-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.kaspa-panel {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2147483000;
+  width: min(380px, calc(100vw - 32px));
+  border: 1px solid #9fb3c8;
+  border-radius: 8px;
+  background: #fff;
+  color: #1f2d3d;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.kaspa-panel-title {
+  padding: 8px 12px;
+  border-bottom: 1px solid #e3e9ef;
+  font-weight: bold;
+}
+
+.kaspa-panel-body {
+  padding: 10px 12px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.kaspa-panel-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 0 12px 10px;
+}
+
+.kaspa-panel-actions:empty {
+  display: none;
+}
+
+.kaspa-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 2147483001;
+  transform: translateX(-50%);
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: rgba(31, 45, 61, 0.92);
+  color: #fff;
+  font-size: 13px;
+}
